@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.preloader{
+    position: fixed;
+    display: grid;
+    inset: 0;
+    background: #fff;
+    place-content: center;
+    z-index: 30;
+    visibility: visible;
+}
+
+.hide-preloader{
+    visibility: hidden;
+    display: none;
+    z-index: -5;
+}
+
+.header{
+    min-height: 100vh;
+    position: relative;
+}   
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: #00000050;
+    display: grid;
+    place-content: center;
+}
+
+.overlay__title{
+    font-size: 50px;
+    color: #fff;
+}
+
+.overlay-btn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    background: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 5px solid #e0e0e0;
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay-btn__text{
+    font-size: 18px;
+    width: 120px;
+    text-align: center;
+}
+
+.overlay-btn__switch{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #ce3c3c;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.overlay-btn.pause .overlay-btn__switch{
+    transform: translateX(100%);
+}
+
+/* .overlay-btn.play .overlay-btn__switch{
+    transform: translateX(-100%);
+} */
+
+
+.btn-container{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Video</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script defer type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <!-- preloader -->
+        <div class="preloader">
+            <img src="preloader.gif" alt="preloader">
+        </div>
+
+        <!-- video -->
+        <header class="header">
+            <div class="overlay">
+                <h1 class="overlay__title">Proyecto de video</h1>
+
+                <div class="btn-container">
+                    <button class="overlay-btn">
+                        <span class="overlay-btn__switch"></span>
+                        <span class="overlay-btn__text">reproducir</span>
+                        <span class="overlay-btn__text">Pausar</span>
+                    </button>
+                </div>
+            </div>
+            <video muted autoplay loop id="video" class="video" src="./video.mp4"></video>
+        </header>
+    </body>
+</html>
